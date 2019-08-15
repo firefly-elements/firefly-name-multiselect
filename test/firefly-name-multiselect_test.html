@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>firefly-name-multiselect test</title>
+
+    <script src="../../../@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../../../wct-browser-legacy/browser.js"></script>
+
+    <script type="module" src="../firefly-name-multiselect.js"></script>
+  </head>
+  <body>
+
+    <test-fixture id="BasicTestFixture">
+      <template>
+        <firefly-name-multiselect></firefly-name-multiselect>
+      </template>
+    </test-fixture>
+
+    <test-fixture id="ChangedPropertyTestFixture">
+      <template>
+        <firefly-name-multiselect prop1="new-prop1"></firefly-name-multiselect>
+      </template>
+    </test-fixture>
+
+    <script type="module">
+import '../firefly-name-multiselect.js';
+suite('firefly-name-multiselect', () => {
+
+  test('instantiating the element with default properties works', () => {
+    const element = fixture('BasicTestFixture');
+    assert.equal(element.prop1, 'firefly-name-multiselect');
+    const elementShadowRoot = element.shadowRoot;
+    const elementHeader = elementShadowRoot.querySelector('h2');
+    assert.equal(elementHeader.innerHTML, 'Hello firefly-name-multiselect!');
+  });
+
+  test('setting a property on the element works', () => {
+    // Create a test fixture
+    const element = fixture('ChangedPropertyTestFixture');
+    assert.equal(element.prop1, 'new-prop1');
+    const elementShadowRoot = element.shadowRoot;
+    const elementHeader = elementShadowRoot.querySelector('h2');
+    assert.equal(elementHeader.innerHTML, 'Hello new-prop1!');
+  });
+
+});
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "firefly-name-multiselect",
+  "main": "firefly-name-multiselect.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "iron-icon": "PolymerElements/iron-icon#^2.1.0",
+    "iron-icons": "PolymerElements/iron-icons#^2.1.1",
+    "paper-item": "PolymerElements/paper-item#^2.1.1",
+    "paper-listbox": "PolymerElements/paper-listbox#^2.1.1",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#^2.0.3"
+  },
+  "devDependencies": {
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  },
+  "resolutions": {
+    "polymer": "^2.0.0",
+    "iron-flex-layout": "^2.0.3"
+  }
+}
